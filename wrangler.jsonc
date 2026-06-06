@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "reklamaalushta",
+  "compatibility_date": "2026-06-06",
+  "assets": {
+    "directory": "./outputs",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "single-page-application"
+  }
+}
