@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Реклама - наружная реклама и полиграфия</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="Реклама">
+      <img src="assets/logo-reklama.svg" alt="Реклама">
+    </a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#works">Работы</a>
+      <a href="#order">Стоимость</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#about">О нас</a>
+    </nav>
+    <div class="header-contact">
+      <a href="tel:+79783036766">+7 978 303-67-66</a>
+      <a class="orange-link" href="#contacts">Связаться</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>Наружная реклама и полиграфия в Алуште <span>под ключ</span></h1>
+          <p>от идеи до производства и монтажа - делаем рекламу, которая работает на ваш бизнес</p>
+          <div class="hero-actions">
+            <a class="btn btn-orange" href="https://t.me/ReklamaCrimeaAlushta" target="_blank" rel="noreferrer">Написать нам <span>↗</span></a>
+          </div>
+        </div>
+        <form class="lead-form" id="leadForm" aria-label="Получить расчет">
+          <h2>Получите расчет за 15 минут</h2>
+          <input id="leadName" name="name" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
+          <input id="leadPhone" name="phone" type="tel" placeholder="Телефон*" aria-label="Телефон" required>
+          <button class="btn btn-orange" type="submit">Получить расчет</button>
+          <output class="form-status" id="leadStatus"></output>
+          <small>Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</small>
+        </form>
+      </div>
+      <div class="benefits" aria-label="Преимущества">
+        <div><span>◷</span><p>Быстрое<br>изготовление</p></div>
+        <div><span>▥</span><p>Дизайн<br>бесплатно</p></div>
+        <div><span>◴</span><p>Доставка и<br>монтаж</p></div>
+        <div><span>♧</span><p>Гарантия<br>качества</p></div>
+      </div>
+    </section>
+
+    <section class="section order" id="order">
+      <h2>Заказать</h2>
+      <div class="product-row">
+        <button class="product-card" type="button" data-product="cards">
+          <span>Визитки</span>
+          <small>90x50мм</small>
+          <img src="assets/business-cards.png" alt="Визитки">
+        </button>
+        <button class="product-card" type="button" data-product="booklets">
+          <span>Евробуклет</span>
+          <small>297x210мм</small>
+          <img src="assets/euro-booklet.png" alt="Евробуклет">
+        </button>
+        <button class="product-card" type="button" data-product="flyers">
+          <span>Листовки</span>
+          <small>A4 / A5 / A6</small>
+          <img src="assets/flyers.png" alt="Листовки">
+        </button>
+        <button class="product-card" type="button" data-product="stickers">
+          <span>Стикеры</span>
+          <small>индивидуальный расчёт</small>
+          <img src="assets/03d888e8-36a5-457f-98f5-48d539c96e4f.png" alt="Стикеры">
+        </button>
+        <button class="product-card" type="button" data-product="banners">
+          <span>Баннеры</span>
+          <small>индивидуальный расчёт</small>
+          <img src="assets/4dcc268b-8a11-40d4-b835-d9d73fb8531f.png" alt="Баннеры">
+        </button>
+        <button class="product-card" type="button" data-product="euroflyers">
+          <span>Еврофлаер</span>
+          <small>100 / 500 / 1000 шт.</small>
+          <img src="assets/2a17a5e5-9277-4f99-b312-3f570d22683a.png" alt="Еврофлаер">
+        </button>
+      </div>
+    </section>
+
+    <section class="section works" id="works">
+      <div class="section-title">
+        <h2>Наши работы</h2>
+        <button class="link-button" type="button" data-work="0">Все работы →</button>
+      </div>
+      <div class="work-row">
+        <button class="work-card" type="button" data-work="0">
+          <img src="assets/7711d04b-312e-412d-a983-3c36f986d25d.png" alt="Вывески">
+          <strong>Вывески</strong>
+          <small>Спортлайф, косметика, суши</small>
+        </button>
+        <button class="work-card" type="button" data-work="1">
+          <img src="assets/bbd6e111-0134-4eda-9dde-0b75976cfda6.png" alt="Баннеры">
+          <strong>Баннеры</strong>
+          <small>Билборды и крупный формат</small>
+        </button>
+        <button class="work-card" type="button" data-work="2">
+          <img src="assets/6d3e999b-75dc-4bc5-a8d5-6fbcd05785f2.png" alt="Полиграфия">
+          <strong>Полиграфия</strong>
+          <small>Визитки, листовки, буклеты, наклейки</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="section process">
+      <h2>Как мы работаем</h2>
+      <div class="steps">
+        <div><span>1</span><strong>Заявка</strong><p>Вы оставляете заявку на сайте</p></div>
+        <div><span>2</span><strong>Консультация</strong><p>Мы обсуждаем ваш проект и рассчитываем стоимость</p></div>
+        <div><span>3</span><strong>Дизайн</strong><p>Разрабатываем дизайн и согласовываем с вами</p></div>
+        <div><span>4</span><strong>Производство</strong><p>Изготавливаем вашу рекламу</p></div>
+        <div><span>5</span><strong>Монтаж</strong><p>Монтируем вашу рекламу</p></div>
+      </div>
+    </section>
+
+    <section class="consult" id="contacts">
+      <div class="consult-copy">
+        <h2>Нужна консультация?</h2>
+        <p>Свяжитесь с нами удобным способом</p>
+        <div class="contact-lines">
+          <a href="https://t.me/ReklamaCrimeaAlushta" target="_blank" rel="noreferrer">Telegram · Написать</a>
+          <a href="tel:+79783036766">Позвонить · +7 978 303-67-66</a>
+          <a href="mailto:reklamacrimeaalushta@gmail.com">Email · reklamacrimeaalushta@gmail.com</a>
+        </div>
+      </div>
+      <img class="manager-card" src="assets/contact-manager.png" alt="Менеджер Реклама">
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <h2>О компании</h2>
+        <p>Мы работаем на рынке наружной рекламы и полиграфии более 8 лет. За это время реализовали более 1000 проектов различной сложности. Наша миссия - помогать бизнесу выделиться и привлечь клиентов.</p>
+      </div>
+      <div class="stats">
+        <strong>8+<span>лет на рынке</span></strong>
+        <strong>1000+<span>реализованных проектов</span></strong>
+        <strong>500+<span>довольных клиентов</span></strong>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#top" aria-label="Реклама">
+      <img src="assets/logo-reklama.svg" alt="Реклама">
+    </a>
+    <div class="footer-socials">
+      <a class="social-icon" href="mailto:reklamacrimeaalushta@gmail.com" aria-label="Написать на почту">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2.4 2 6.6 5.1L18.6 7H5.4Zm13.6 10V9.4l-7 5.4-7-5.4V17h14Z"/></svg>
+      </a>
+      <a class="social-icon telegram" href="https://t.me/ReklamaCrimeaAlushta" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 4.3 18.5 20c-.2 1-.8 1.2-1.6.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L7 14 2.5 12.6c-1-.3-1-1 .2-1.5L20.3 4.2c.8-.3 1.6.2 1.4 1.1Z"/></svg>
+      </a>
+    </div>
+    <nav class="footer-nav">
+      <a href="#works">Работы</a>
+      <a href="#order">Стоимость</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#about">О нас</a>
+    </nav>
+    <div class="footer-contacts">
+      <a href="tel:+79783036766">+7 978 303-67-66</a>
+      <a href="mailto:reklamacrimeaalushta@gmail.com">reklamacrimeaalushta@gmail.com</a>
+      <span>ПН-ВС 9:00-19:00</span>
+      <a class="btn btn-dark" href="#contacts">Написать нам ↗</a>
+    </div>
+  </footer>
+
+  <div class="modal-layer product-modal" id="productModal" hidden>
+    <form class="calc-card">
+      <button class="modal-x" id="closeProduct" type="button" aria-label="Закрыть">×</button>
+      <img class="calc-image" id="calcImage" alt="">
+      <h2 id="calcTitle"></h2>
+      <p class="size-label" id="calcSize"></p>
+      <div class="option-line" id="formatOptions"></div>
+      <div class="option-line" id="quantityOptions"></div>
+      <div class="option-line" id="sideOptions"></div>
+      <p class="cost-label">Предварительная стоимость</p>
+      <strong class="price" id="price">1400₽</strong>
+      <p class="calc-note" id="calcNote"></p>
+      <button class="submit-order" id="submitOrder" type="button">Продолжить оформление <span>↗</span></button>
+      <small class="telegram-note">Ответим в Telegram за 5-15 минут</small>
+      <button class="deal-button" id="dealButton" type="button"></button>
+    </form>
+  </div>
+
+  <div class="modal-layer works-modal" id="worksModal" hidden>
+    <div class="works-popup">
+      <button class="modal-x" id="closeWorks" type="button" aria-label="Закрыть">×</button>
+      <button class="slider-arrow left" id="prevWork" type="button" aria-label="Предыдущая">‹</button>
+      <img id="popupImage" alt="">
+      <button class="slider-arrow right" id="nextWork" type="button" aria-label="Следующая">›</button>
+      <div class="popup-caption" id="popupCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
