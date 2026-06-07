@@ -2,7 +2,7 @@ const productData = {
   cards: {
     title: 'Визитки',
     size: '90x50мм',
-    image: 'assets/business-cards.png',
+    image: 'assets/business-cards.webp',
     mode: 'fixed',
     formats: [],
     quantities: [1000],
@@ -16,7 +16,7 @@ const productData = {
   booklets: {
     title: 'Евробуклет',
     size: '297x210мм',
-    image: 'assets/euro-booklet.png',
+    image: 'assets/euro-booklet.webp',
     mode: 'fixed',
     formats: [],
     quantities: [1000],
@@ -30,7 +30,7 @@ const productData = {
   flyers: {
     title: 'Листовки',
     size: 'A4 / A5 / A6',
-    image: 'assets/flyers.png',
+    image: 'assets/flyers.webp',
     mode: 'variable',
     formats: ['A4', 'A5', 'A6'],
     quantities: [100, 500, 1000],
@@ -57,7 +57,7 @@ const productData = {
   stickers: {
     title: 'Стикеры',
     size: 'индивидуальный расчёт',
-    image: 'assets/03d888e8-36a5-457f-98f5-48d539c96e4f.png',
+    image: 'assets/03d888e8-36a5-457f-98f5-48d539c96e4f.webp',
     mode: 'individual',
     formats: [],
     quantities: [],
@@ -68,7 +68,7 @@ const productData = {
   banners: {
     title: 'Баннеры',
     size: 'индивидуальный расчёт',
-    image: 'assets/4dcc268b-8a11-40d4-b835-d9d73fb8531f.png',
+    image: 'assets/4dcc268b-8a11-40d4-b835-d9d73fb8531f.webp',
     mode: 'individual',
     formats: [],
     quantities: [],
@@ -79,7 +79,7 @@ const productData = {
   euroflyers: {
     title: 'Еврофлаер',
     size: '100 / 500 / 1000 шт.',
-    image: 'assets/2a17a5e5-9277-4f99-b312-3f570d22683a.png',
+    image: 'assets/2a17a5e5-9277-4f99-b312-3f570d22683a.webp',
     mode: 'variable',
     formats: [],
     quantities: [100, 500, 1000],
@@ -93,21 +93,28 @@ const productData = {
   }
 };
 
+document.addEventListener('error', (event) => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.src.endsWith('.webp')) {
+    image.src = image.src.replace(/\.webp$/, '.png');
+  }
+}, true);
+
 const workData = [
   [
-    { title: 'Комплексное оформление спорт магазина', image: 'assets/bf391dc5-3cd9-4ffa-94ae-73e46b352d96.png' },
-    { title: 'Комплексное оформление магазина косметики', image: 'assets/67856d96-f682-491c-a1a7-cad47489b87c.png' },
-    { title: 'Комплексное оформление ресторана', image: 'assets/7711d04b-312e-412d-a983-3c36f986d25d.png' }
+    { title: 'Комплексное оформление спорт магазина', image: 'assets/bf391dc5-3cd9-4ffa-94ae-73e46b352d96.webp' },
+    { title: 'Комплексное оформление магазина косметики', image: 'assets/67856d96-f682-491c-a1a7-cad47489b87c.webp' },
+    { title: 'Комплексное оформление ресторана', image: 'assets/7711d04b-312e-412d-a983-3c36f986d25d.webp' }
   ],
   [
-    { title: 'Билборд - реклама магазина мебели', image: 'assets/bbd6e111-0134-4eda-9dde-0b75976cfda6.png' },
-    { title: 'Билборд - реклама клининговой компании', image: 'assets/be93dd37-5e7d-480e-b763-f8bd1fb9c0ac.png' },
-    { title: 'Билборд - реклама магазина мебели', image: 'assets/461c61d5-7580-49fa-8834-d0d7871bc36b.png' }
+    { title: 'Билборд - реклама магазина мебели', image: 'assets/bbd6e111-0134-4eda-9dde-0b75976cfda6.webp' },
+    { title: 'Билборд - реклама клининговой компании', image: 'assets/be93dd37-5e7d-480e-b763-f8bd1fb9c0ac.webp' },
+    { title: 'Билборд - реклама магазина мебели', image: 'assets/461c61d5-7580-49fa-8834-d0d7871bc36b.webp' }
   ],
   [
-    { title: 'Комплексное оформление полиграфии', image: 'assets/6d3e999b-75dc-4bc5-a8d5-6fbcd05785f2.png' },
-    { title: 'Буклет для агентства недвижимости', image: 'assets/49e72258-9c15-486b-be5b-26e1e73ee8e0.png' },
-    { title: 'Комплексное оформление фирменного стиля', image: 'assets/06797aa9-46bc-4567-9f4f-1560d7538005.png' }
+    { title: 'Комплексное оформление полиграфии', image: 'assets/6d3e999b-75dc-4bc5-a8d5-6fbcd05785f2.webp' },
+    { title: 'Буклет для агентства недвижимости', image: 'assets/49e72258-9c15-486b-be5b-26e1e73ee8e0.webp' },
+    { title: 'Комплексное оформление фирменного стиля', image: 'assets/06797aa9-46bc-4567-9f4f-1560d7538005.webp' }
   ]
 ];
 
@@ -400,3 +407,4 @@ fetch('prices.json')
     });
   })
   .catch(() => {});
+

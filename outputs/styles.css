@@ -136,7 +136,7 @@ button {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.35)),
-    url("assets/hero-main.webp") center / cover no-repeat;
+    url("assets/hero-main.png") center / cover no-repeat;
 }
 
 .hero-overlay {
