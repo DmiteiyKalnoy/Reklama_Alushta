@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reklama-alushta.ru/sitemap.xml
