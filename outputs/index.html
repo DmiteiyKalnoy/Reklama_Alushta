@@ -6,6 +6,9 @@
   <title>Наружная реклама и полиграфия в Алуште | Реклама Алушта</title>
   <meta name="description" content="Наружная реклама и полиграфия в Алуште под ключ: вывески, баннеры, визитки, листовки, буклеты и стикеры. Дизайн, изготовление и монтаж.">
   <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="canonical" href="https://reklama-alushta.ru/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
@@ -90,9 +93,12 @@
           <h2>Получите расчет за 15 минут</h2>
           <input id="leadName" name="name" type="text" placeholder="Ваше имя" aria-label="Ваше имя" required>
           <input id="leadPhone" name="phone" type="tel" placeholder="Телефон*" aria-label="Телефон" required>
+          <label class="privacy-consent">
+            <input name="privacy" type="checkbox" required>
+            <span>Согласен на обработку персональных данных согласно <button class="privacy-link" type="button" data-open-privacy>политике конфиденциальности</button></span>
+          </label>
           <button class="btn btn-orange" type="submit">Получить расчет</button>
           <output class="form-status" id="leadStatus"></output>
-          <small>Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</small>
         </form>
       </div>
       <div class="benefits" aria-label="Преимущества">
@@ -223,6 +229,7 @@
       <a href="tel:+79783036766">+7 978 303-67-66</a>
       <a href="mailto:reklamacrimeaalushta@gmail.com">reklamacrimeaalushta@gmail.com</a>
       <span>ПН-ВС 9:00-19:00</span>
+      <button class="footer-policy-link" type="button" data-open-privacy>Политика конфиденциальности</button>
       <a class="btn btn-dark" href="#contacts">Написать нам ↗</a>
     </div>
   </footer>
@@ -253,6 +260,32 @@
       <button class="slider-arrow right" id="nextWork" type="button" aria-label="Следующая">›</button>
       <div class="popup-caption" id="popupCaption"></div>
     </div>
+  </div>
+
+  <div class="modal-layer privacy-modal" id="privacyModal" hidden>
+    <article class="privacy-popup" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+      <button class="modal-x" id="closePrivacy" type="button" aria-label="Закрыть">×</button>
+      <h2 id="privacyTitle">Политика конфиденциальности</h2>
+      <p class="privacy-updated">Редакция от 7 июня 2026 года</p>
+
+      <h3>1. Общие положения</h3>
+      <p>Настоящая политика определяет порядок обработки персональных данных посетителей сайта reklama-alushta.ru. Оператором персональных данных является владелец сайта «Реклама Алушта». Связаться с оператором можно по электронной почте <a href="mailto:reklamacrimeaalushta@gmail.com">reklamacrimeaalushta@gmail.com</a>.</p>
+
+      <h3>2. Какие данные обрабатываются</h3>
+      <p>При отправке формы на сайте обрабатываются имя, номер телефона, выбранные услуги и параметры заказа. Также могут обрабатываться технические сведения, которые автоматически передаёт браузер.</p>
+
+      <h3>3. Цели обработки</h3>
+      <p>Данные используются для подготовки расчёта, связи с пользователем, уточнения заказа и предоставления запрошенной информации. Данные не используются для массовых рекламных рассылок без отдельного согласия.</p>
+
+      <h3>4. Передача и хранение данных</h3>
+      <p>При продолжении оформления пользователь переходит в Telegram и самостоятельно отправляет сформированное сообщение. Обработка данных в Telegram также регулируется правилами этого сервиса. Оператор не передаёт данные третьим лицам, кроме случаев, предусмотренных законом или необходимых для исполнения обращения пользователя.</p>
+
+      <h3>5. Права пользователя</h3>
+      <p>Пользователь может запросить сведения об обработке данных, их уточнение, блокирование или удаление, а также отозвать согласие, направив письмо на указанный адрес электронной почты.</p>
+
+      <h3>6. Срок действия согласия</h3>
+      <p>Согласие действует до достижения целей обработки или до его отзыва пользователем. Политика может обновляться; актуальная редакция всегда доступна на сайте.</p>
+    </article>
   </div>
 
   <script src="script.js"></script>

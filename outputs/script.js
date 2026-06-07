@@ -146,6 +146,7 @@ const calcNote = document.querySelector('#calcNote');
 const dealButton = document.querySelector('#dealButton');
 const leadForm = document.querySelector('#leadForm');
 const leadStatus = document.querySelector('#leadStatus');
+const privacyModal = document.querySelector('#privacyModal');
 
 function formatMoney(value) {
   return new Intl.NumberFormat('ru-RU').format(value).replace(/\s/g, '') + '₽';
@@ -372,6 +373,14 @@ document.querySelector('#closeProduct').addEventListener('click', () => {
 document.querySelector('#closeWorks').addEventListener('click', () => {
   worksModal.hidden = true;
 });
+document.querySelectorAll('[data-open-privacy]').forEach((button) => {
+  button.addEventListener('click', () => {
+    privacyModal.hidden = false;
+  });
+});
+document.querySelector('#closePrivacy').addEventListener('click', () => {
+  privacyModal.hidden = true;
+});
 document.querySelector('#prevWork').addEventListener('click', () => {
   currentWork = (currentWork - 1 + workData[currentWorkCategory].length) % workData[currentWorkCategory].length;
   renderWork();
@@ -388,11 +397,15 @@ worksModal.addEventListener('click', (event) => {
 productModal.addEventListener('click', (event) => {
   if (event.target === productModal) productModal.hidden = true;
 });
+privacyModal.addEventListener('click', (event) => {
+  if (event.target === privacyModal) privacyModal.hidden = true;
+});
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     productModal.hidden = true;
     worksModal.hidden = true;
+    privacyModal.hidden = true;
   }
   if (!worksModal.hidden && event.key === 'ArrowLeft') document.querySelector('#prevWork').click();
   if (!worksModal.hidden && event.key === 'ArrowRight') document.querySelector('#nextWork').click();

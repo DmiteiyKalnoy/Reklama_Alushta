@@ -236,7 +236,8 @@ button {
   font-size: 24px;
 }
 
-.lead-form input {
+.lead-form input[type="text"],
+.lead-form input[type="tel"] {
   height: 44px;
   padding: 0 14px;
   border: 1px solid rgba(255,255,255,.6);
@@ -249,6 +250,40 @@ button {
   color: #aaa;
   font-size: 10px;
   text-align: center;
+}
+
+.privacy-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #b8b8b8;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.privacy-consent input {
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  margin: 1px 0 0;
+  accent-color: var(--orange);
+}
+
+.privacy-link,
+.footer-policy-link {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.privacy-link:hover,
+.footer-policy-link:hover {
+  color: var(--orange);
 }
 
 .form-status {
@@ -597,6 +632,47 @@ button {
   display: none;
 }
 
+.privacy-popup {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(86vh, 820px);
+  overflow-y: auto;
+  padding: 38px 42px;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+
+.privacy-popup h2 {
+  margin: 0 45px 4px 0;
+  font-size: 28px;
+}
+
+.privacy-popup h3 {
+  margin: 24px 0 7px;
+  font-size: 17px;
+}
+
+.privacy-popup p {
+  margin: 0;
+  color: #555;
+  line-height: 1.55;
+}
+
+.privacy-popup a {
+  color: #c76f00;
+}
+
+.privacy-updated {
+  font-size: 13px;
+}
+
+.footer-policy-link {
+  color: #aaa;
+  text-align: left;
+}
+
 .calc-card {
   position: relative;
   width: min(540px, calc(100vw - 24px));
@@ -914,6 +990,15 @@ button {
 
   .lead-form {
     padding: 22px;
+  }
+
+  .privacy-popup {
+    max-height: 90vh;
+    padding: 30px 20px;
+  }
+
+  .privacy-popup h2 {
+    font-size: 23px;
   }
 
   .benefits {
