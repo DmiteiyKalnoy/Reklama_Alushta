@@ -58,15 +58,46 @@ button {
 }
 
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 9px;
   min-width: 210px;
+  color: #fff;
+  text-decoration: none;
 }
 
-.logo img {
-  display: block;
-  width: 218px;
-  max-width: 100%;
-  height: auto;
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 34px;
+  color: #181818;
+  background: #ff9100;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%, 0 70%);
+}
+
+.logo-copy {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.logo-copy strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.logo-copy small {
+  padding-left: 9px;
+  border-left: 1px solid rgba(255,255,255,.45);
+  color: #ff9100;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -105,7 +136,7 @@ button {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.35)),
-    url("assets/hero-main.png") center / cover no-repeat;
+    url("assets/hero-main.webp") center / cover no-repeat;
 }
 
 .hero-overlay {
@@ -459,7 +490,7 @@ button {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.58)),
-    url("assets/461c61d5-7580-49fa-8834-d0d7871bc36b.png") center / cover no-repeat;
+    url("assets/461c61d5-7580-49fa-8834-d0d7871bc36b.webp") center / cover no-repeat;
 }
 
 .about p {
@@ -853,8 +884,8 @@ button {
     min-width: 160px;
   }
 
-  .logo img {
-    width: 176px;
+  .logo-copy strong {
+    font-size: 21px;
   }
 
   .nav {
@@ -957,3 +988,4 @@ button {
     right: 12px;
   }
 }
+

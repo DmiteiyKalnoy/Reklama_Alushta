@@ -7,4 +7,8 @@
 
 /assets/*.png
   Content-Type: image/png
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=31536000, immutable
